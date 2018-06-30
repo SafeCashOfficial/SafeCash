@@ -1,23 +1,15 @@
-Bitcoin Core
+SafeCash
 =============
 
 Intro
 -----
-Bitcoin is a free open source peer-to-peer electronic cash system that is
-completely decentralized, without the need for a central server or trusted
-parties.  Users hold the crypto keys to their own money and transact directly
-with each other, with the help of a P2P network to check for double-spending.
+SafeCash (SCASH) is a fair-launch, decentralized cryptocurrency built upon the latest 0.16 BTC codebase focused on speed, security and stability. SafeCash utilizes Equihash 192.7 Proof-of-Work with randomized block rewards. Proof-of-Stake and Masternodes will be implemented over time. SafeCash provides the building blocks to be the first true Point-of-Sale cryptocurrency that non-technical consumers can adopt anywhere.
 
 
 Setup
 -----
 Unpack the files into a directory and run safecash-qt.exe.
 
-Bitcoin Core is the original Bitcoin client and it builds the backbone of the network.
-However, it downloads and stores the entire history of Bitcoin transactions;
-depending on the speed of your computer and network connection, the synchronization
-process can take anywhere from a few hours to a day or more.
+SafeCash QT is the primary wallet for the SafeCash network. It downloads and, by default, stores the entire history of SafeCash transactions; depending on the speed of your computer and network connection, the synchronization process can multiple hours to complete
 
-See the bitcoin wiki at:
-  https://en.bitcoin.it/wiki/Main_Page
-for more help and information.
+To download the SafeCash QT Wallet, visit safecash.io.

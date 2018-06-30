@@ -28,7 +28,7 @@ Drag SafeCash to your applications folder, and then run safecash-qt.
 
 ### Need Help?
 
-* Please visit our [forums](https://safecash.io/forum/
+* Please visit our [forums](https://safecash.io/forum/)
 
 Building
 ---------------------

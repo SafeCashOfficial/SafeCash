@@ -13,7 +13,7 @@ can be found in the contrib/init folder.
 Service User
 ---------------------------------
 
-All three Linux startup configurations assume the existence of a "bitcoin" user
+All three Linux startup configurations assume the existence of a "safecash" user
 and group.  They must be created before attempting to use these scripts.
 The OS X configuration assumes safecashd will be set up for the current user.
 
@@ -44,7 +44,7 @@ This allows for running safecashd without having to do any manual configuration.
 relative to the data directory. `wallet` *only* supports relative paths.
 
 For an example configuration file that describes the configuration settings,
-see `contrib/debian/examples/bitcoin.conf`.
+see `contrib/debian/examples/safecash.conf`.
 
 Paths
 ---------------------------------
@@ -54,23 +54,23 @@ Paths
 All three configurations assume several paths that might need to be adjusted.
 
 Binary:              `/usr/bin/safecashd`  
-Configuration file:  `/etc/bitcoin/bitcoin.conf`  
+Configuration file:  `/etc/safecash/safecash.conf`  
 Data directory:      `/var/lib/safecashd`  
 PID file:            `/var/run/safecashd/safecashd.pid` (OpenRC and Upstart) or `/var/lib/safecashd/safecashd.pid` (systemd)  
 Lock file:           `/var/lock/subsys/safecashd` (CentOS)  
 
 The configuration file, PID directory (if applicable) and data directory
-should all be owned by the bitcoin user and group.  It is advised for security
+should all be owned by the safecash user and group.  It is advised for security
 reasons to make the configuration file and data directory only readable by the
-bitcoin user and group.  Access to bitcoin-cli and other safecashd rpc clients
+safecash user and group.  Access to safecash-cli and other safecashd rpc clients
 can then be controlled by group membership.
 
 ### Mac OS X
 
 Binary:              `/usr/local/bin/safecashd`  
-Configuration file:  `~/Library/Application Support/Bitcoin/bitcoin.conf`  
-Data directory:      `~/Library/Application Support/Bitcoin`  
-Lock file:           `~/Library/Application Support/Bitcoin/.lock`  
+Configuration file:  `~/Library/Application Support/SafeCash/safecash.conf`  
+Data directory:      `~/Library/Application Support/SafeCash`  
+Lock file:           `~/Library/Application Support/SafeCash/.lock`  
 
 Installing Service Configuration
 -----------------------------------
@@ -104,7 +104,7 @@ use old versions of Upstart and do not supply the start-stop-daemon utility.
 Copy safecashd.init to /etc/init.d/safecashd. Test by running `service safecashd start`.
 
 Using this script, you can adjust the path and flags to the safecashd program by
-setting the BITCOIND and FLAGS environment variables in the file
+setting the SAFECASHD and FLAGS environment variables in the file
 /etc/sysconfig/safecashd. You can also use the DAEMONOPTS environment variable here.
 
 ### Mac OS X
@@ -116,7 +116,7 @@ This Launch Agent will cause safecashd to start whenever the user logs in.
 
 NOTE: This approach is intended for those wanting to run safecashd as the current user.
 You will need to modify io.safecash.safecashd.plist if you intend to use it as a
-Launch Daemon with a dedicated bitcoin user.
+Launch Daemon with a dedicated safecash user.
 
 Auto-respawn
 -----------------------------------

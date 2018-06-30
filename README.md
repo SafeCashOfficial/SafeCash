@@ -1,7 +1,7 @@
-![SC Logo](https://image.ibb.co/h82JEy/SC.png "SafeCa$h")
-<center>SafeCa$h Official
+<p align="center">![SC Logo](https://image.ibb.co/h82JEy/SC.png "SafeCa$h")</p>
+<p align="center">SafeCa$h Official
 &middot;
-[![Github License](https://img.shields.io/npm/l/express.svg)](https://github.com/SafeCashOfficial/SafeCash/blob/master/COPYING)</center>
+[![Github License](https://img.shields.io/npm/l/express.svg)](https://github.com/SafeCashOfficial/SafeCash/blob/master/COPYING)</p>
 =====================================
 
 SafeCash (SCASH) is a fair-launch, decentralized cryptocurrency built upon the latest 0.16 BTC codebase focused on speed, security and stability

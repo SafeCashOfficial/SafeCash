@@ -1,12 +1,12 @@
 UNIX BUILD NOTES
 ====================
-Some notes on how to build Bitcoin Core in Unix.
+Some notes on how to build SafeCash in Unix.
 
 (for OpenBSD specific instructions, see [build-openbsd.md](build-openbsd.md))
 
 Note
 ---------------------
-Always use absolute paths to configure and compile bitcoin and the dependencies,
+Always use absolute paths to configure and compile safecash and the dependencies,
 for example, when specifying the path of the dependency:
 
 	../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
@@ -17,7 +17,8 @@ the usage of the absolute path.
 To Build
 ---------------------
 
-```bash
+```
+bash
 ./autogen.sh
 ./configure
 make
@@ -55,7 +56,7 @@ Memory Requirements
 --------------------
 
 C++ compilers are memory-hungry. It is recommended to have at least 1.5 GB of
-memory available when compiling Bitcoin Core. On systems with less, gcc can be
+memory available when compiling SafeCash. On systems with less, gcc can be
 tuned to conserve memory with additional CXXFLAGS:
 
 
@@ -94,7 +95,7 @@ BerkeleyDB 5.1 or later, which break binary wallet compatibility with the distri
 are based on BerkeleyDB 4.8. If you do not care about wallet compatibility,
 pass `--with-incompatible-bdb` to configure.
 
-See the section "Disable-wallet mode" to build Bitcoin Core without wallet.
+See the section "Disable-wallet mode" to build SafeCash without wallet.
 
 Optional (see --with-miniupnpc and --enable-upnp-default):
 
@@ -108,16 +109,16 @@ ZMQ dependencies (provides ZMQ API 4.x):
 
     configure: error: Wrong libsodium: version >= 1.0.13 required
 
-I tested it with version 1.0.15 (from the `depends` directory) at it works.
-
-    $ cd BTCGPU
-    $ cd depends
-    $ make
-    $ cd ..
-    $ ./autogen.sh
-    $ ./configure --prefix=`pwd`/depends/x86_64-pc-linux-gnu
-    $ make
-    $ make install
+```
+$ cd safecash
+$ cd depends
+$ make
+$ cd ..
+$ ./autogen.sh
+$ ./configure --prefix=`pwd`/depends/x86_64-pc-linux-gnu
+$ make
+$ make install
+```
 
 The command `make install` installs the executables in the `./depends/x86_64-pc-linux-gnu/bin/` directory.
 Dependencies for the GUI: Ubuntu & Debian
@@ -204,7 +205,7 @@ If you need to build Boost yourself:
 
 Security
 --------
-To help make your bitcoin installation more secure by making certain attacks impossible to
+To help make your safecash installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, binaries are hardened by default.
 This can be disabled with:
 
@@ -228,7 +229,7 @@ Hardening enables the following features:
 
     To test that you have built PIE executable, install scanelf, part of paxutils, and use:
 
-    	scanelf -e ./bitcoin
+    	scanelf -e ./safecash
 
     The output should contain:
 
@@ -237,13 +238,13 @@ Hardening enables the following features:
 
 * Non-executable Stack
     If the stack is executable then trivial stack based buffer overflow exploits are possible if
-    vulnerable buffers are found. By default, bitcoin should be built with a non-executable stack
+    vulnerable buffers are found. By default, safecash should be built with a non-executable stack
     but if one of the libraries it uses asks for an executable stack or someone makes a mistake
     and uses a compiler extension which requires an executable stack, it will silently build an
     executable without the non-executable stack protection.
 
     To verify that the stack is non-executable after compiling use:
-    `scanelf -e ./bitcoin`
+    `scanelf -e ./safecash`
 
     the output should contain:
 	STK/REL/PTL
@@ -253,7 +254,7 @@ Hardening enables the following features:
 
 Disable-wallet mode
 --------------------
-When the intention is to run only a P2P node without a wallet, bitcoin may be compiled in
+When the intention is to run only a P2P node without a wallet, safecash may be compiled in
 disable-wallet mode with:
 
     ./configure --disable-wallet
@@ -275,8 +276,8 @@ Setup and Build Example: Arch Linux
 This example lists the steps necessary to setup and build a command line only, non-wallet distribution of the latest changes on Arch Linux:
 
     pacman -S git base-devel boost libevent python
-    git clone https://github.com/bitcoin/bitcoin.git
-    cd bitcoin/
+    git clone https://github.com/safecashofficial/safecash
+    cd safecash/
     ./autogen.sh
     ./configure --disable-wallet --without-gui --without-miniupnpc
     make check
@@ -285,7 +286,7 @@ Note:
 Enabling wallet support requires either compiling against a Berkeley DB newer than 4.8 (package `db`) using `--with-incompatible-bdb`,
 or building and depending on a local version of Berkeley DB 4.8. The readily available Arch Linux packages are currently built using
 `--with-incompatible-bdb` according to the [PKGBUILD](https://projects.archlinux.org/svntogit/community.git/tree/bitcoin/trunk/PKGBUILD).
-As mentioned above, when maintaining portability of the wallet between the standard Bitcoin Core distributions and independently built
+As mentioned above, when maintaining portability of the wallet between the standard SafeCash distributions and independently built
 node software is desired, Berkeley DB 4.8 must be used.
 
 

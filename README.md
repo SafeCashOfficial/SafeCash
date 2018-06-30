@@ -4,9 +4,9 @@ SafeCa$h Official
 [![Github License](https://img.shields.io/npm/l/express.svg)](https://github.com/SafeCashOfficial/SafeCash/blob/master/COPYING)
 =====================================
 
-SafeCash (SCASH) is a fair-launch, decentralized cryptocurrency built upon the latest 0.16 BTC codebase focused on speed, security and stability
-SafeCash utilizes Equihash 192.7 Proof-of-Work with randomized block rewards. Proof-of-Stake and Masternodes will be implemented over time
-SafeCash provides the building blocks to be the first true Point-of-Sale cryptocurrency that non-technical consumers can adopt anywhere.
+* SafeCash (SCASH) is a fair-launch, decentralized cryptocurrency built upon the latest 0.16 BTC codebase focused on speed, security and stability
+* SafeCash utilizes Equihash 192.7 Proof-of-Work with randomized block rewards. Proof-of-Stake and Masternodes will be implemented over time
+* SafeCash provides the building blocks to be the first true Point-of-Sale cryptocurrency that non-technical consumers can adopt anywhere.
 
 ## Specifications
 

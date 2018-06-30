@@ -8,22 +8,10 @@ check-doc.py
 Check if all command line args are documented. The return value indicates the
 number of undocumented args.
 
-clang-format-diff.py
-===================
-
-A script to format unified git diffs according to [.clang-format](../../src/.clang-format).
-
-For instance, to format the last commit with 0 lines of context,
-the script should be called from the git root folder as follows.
-
-```
-git diff -U0 HEAD~1.. | ./contrib/devtools/clang-format-diff.py -p1 -i -v
-```
-
 copyright\_header.py
 ====================
 
-Provides utilities for managing copyright headers of `The Bitcoin Core
+Provides utilities for managing copyright headers of `The SafeCash Official
 developers` in repository source files. It has three subcommands:
 
 ```
@@ -42,31 +30,31 @@ Specifying `verbose` will list the full filenames of files of each category.
 
 copyright\_header.py update \<base\_directory\> [verbose]
 ---------------------------------------------------------
-Updates all the copyright headers of `The Bitcoin Core developers` which were
+Updates all the copyright headers of `The SafeCash Official developers` which were
 changed in a year more recent than is listed. For example:
 ```
-// Copyright (c) <firstYear>-<lastYear> The Bitcoin Core developers
+// Copyright (c) <firstYear>-<lastYear> The SafeCash Official developers
 ```
 will be updated to:
 ```
-// Copyright (c) <firstYear>-<lastModifiedYear> The Bitcoin Core developers
+// Copyright (c) <firstYear>-<lastModifiedYear> The SafeCash Official developers
 ```
 where `<lastModifiedYear>` is obtained from the `git log` history.
 
 This subcommand also handles copyright headers that have only a single year. In
 those cases:
 ```
-// Copyright (c) <year> The Bitcoin Core developers
+// Copyright (c) <year> The SafeCash Official developers
 ```
 will be updated to:
 ```
-// Copyright (c) <year>-<lastModifiedYear> The Bitcoin Core developers
+// Copyright (c) <year>-<lastModifiedYear> The SafeCash Official developers
 ```
 where the update is appropriate.
 
 copyright\_header.py insert \<file\>
 ------------------------------------
-Inserts a copyright header for `The Bitcoin Core developers` at the top of the
+Inserts a copyright header for `The SafeCash Official developers` at the top of the
 file in either Python or C++ style as determined by the file extension. If the
 file is a Python file and it has  `#!` starting the first line, the header is
 inserted in the line below it.
@@ -76,31 +64,8 @@ The copyright dates will be set to be `<year_introduced>-<current_year>` where
 `<year_introduced>` is equal to `<current_year>`, it will be set as a single
 year rather than two hyphenated years.
 
-If the file already has a copyright for `The Bitcoin Core developers`, the
+If the file already has a copyright for `The SafeCash Official developers`, the
 script will exit.
-
-gen-manpages.sh
-===============
-
-A small script to automatically create manpages in ../../doc/man by running the release binaries with the -help option.
-This requires help2man which can be found at: https://www.gnu.org/software/help2man/
-
-git-subtree-check.sh
-====================
-
-Run this script from the root of the repository to verify that a subtree matches the contents of
-the commit it claims to have been updated to.
-
-To use, make sure that you have fetched the upstream repository branch in which the subtree is
-maintained:
-* for `src/secp256k1`: https://github.com/bitcoin-core/secp256k1.git (branch master)
-* for `src/leveldb`: https://github.com/bitcoin-core/leveldb.git (branch bitcoin-fork)
-* for `src/univalue`: https://github.com/bitcoin-core/univalue.git (branch master)
-* for `src/crypto/ctaes`: https://github.com/bitcoin-core/ctaes.git (branch master)
-
-Usage: `git-subtree-check.sh DIR (COMMIT)`
-
-`COMMIT` may be omitted, in which case `HEAD` is used.
 
 github-merge.py
 ===============
@@ -112,7 +77,7 @@ For example:
   ./github-merge.py 3077
 
 (in any git repository) will help you merge pull request #3077 for the
-bitcoin/bitcoin repository.
+safecashofficial/safecash repository.
 
 What it does:
 * Fetch master and the pull request.
@@ -132,7 +97,7 @@ Setup
 ---------
 Configuring the github-merge tool for the bitcoin repository is done in the following way:
 
-    git config githubmerge.repository bitcoin/bitcoin
+    git config githubmerge.repository safecashofficial/safecash
     git config githubmerge.testcmd "make -j4 check" (adapt to whatever you want to use for testing)
     git config --global user.signingkey mykeyid (if you want to GPG sign)
 
@@ -162,10 +127,10 @@ If only supported symbols are used the return value will be 0 and the output wil
 
 If there are 'unsupported' symbols, the return value will be 1 a list like this will be printed:
 
-    .../64/test_bitcoin: symbol memcpy from unsupported version GLIBC_2.14
-    .../64/test_bitcoin: symbol __fdelt_chk from unsupported version GLIBC_2.15
-    .../64/test_bitcoin: symbol std::out_of_range::~out_of_range() from unsupported version GLIBCXX_3.4.15
-    .../64/test_bitcoin: symbol _ZNSt8__detail15_List_nod from unsupported version GLIBCXX_3.4.15
+    .../64/test_safecash: symbol memcpy from unsupported version GLIBC_2.14
+    .../64/test_safecash: symbol __fdelt_chk from unsupported version GLIBC_2.15
+    .../64/test_safecash: symbol std::out_of_range::~out_of_range() from unsupported version GLIBCXX_3.4.15
+    .../64/test_safecash: symbol _ZNSt8__detail15_List_nod from unsupported version GLIBCXX_3.4.15
 
 update-translations.py
 ======================

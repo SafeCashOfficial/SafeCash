@@ -1,5 +1,5 @@
 ![SC Logo](https://image.ibb.co/h82JEy/SC.png "SafeCa$h")
-<center<SafeCa$h Official
+<center>SafeCa$h Official
 &middot;
 [![Github License](https://img.shields.io/npm/l/express.svg)](https://github.com/SafeCashOfficial/SafeCash/blob/master/COPYING)</center>
 =====================================

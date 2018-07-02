@@ -60,9 +60,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case SCASH: return QString("Bitcoins");
-    case mSCASH: return QString("Milli-Bitcoins (1 / 1" THIN_SP_UTF8 "000)");
-    case uSCASH: return QString("Micro-Bitcoins (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case SCASH: return QString("SafeCash");
+    case mSCASH: return QString("Milli-SafeCash (1 / 1" THIN_SP_UTF8 "000)");
+    case uSCASH: return QString("Micro-SafeCash (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }

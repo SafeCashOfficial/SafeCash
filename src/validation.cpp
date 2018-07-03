@@ -49,7 +49,7 @@
 #include <boost/foreach.hpp>
 
 #if defined(NDEBUG)
-# error "Bitcoin cannot be compiled without assertions."
+# error "SafeCash Official cannot be compiled without assertions."
 #endif
 
 #define MICRO 0.000001
@@ -232,7 +232,7 @@ CTxMemPool mempool(&feeEstimator);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const std::string strMessageMagic = "Bitcoin Signed Message:\n";
+const std::string strMessageMagic = "SafeCash Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -1742,7 +1742,7 @@ static bool WriteTxIndexDataForBlock(const CBlock& block, CValidationState& stat
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("bitcoin-scriptch");
+    RenameThread("safecash-scriptch");
     scriptcheckqueue.Thread();
 }
 

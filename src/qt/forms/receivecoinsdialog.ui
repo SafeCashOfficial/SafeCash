@@ -118,17 +118,19 @@
           </item>
           <item>
            <widget class="QPushButton" name="clearButton">
-            <property name="minimumSize">
-             <size>
-              <width>60</width>
-              <height>0</height>
-             </size>
+            <property name="sizePolicy">
+             <property name="minimumSize"> // added for test
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
             </property>
             <property name="toolTip">
              <string>Clear all fields of the form.</string>
             </property>
             <property name="text">
-             <string>&amp;Clear</string>
+             <string>Clear</string>
             </property>
             <property name="icon">
              <iconset resource="../bitcoin.qrc">

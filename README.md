@@ -30,7 +30,7 @@ SafeCa$h Official
 * [Website](https://safecash.io/)
 * [Forums](https://safecash.io/forum/)
 * [Discord](https://discord.gg/8hSjExc)
-* [Twitter](https://mobile.twitter.com/SafeCash_IO)
+* [Twitter](https://twitter.com/SafeCash_IO)
 
 
 ## Development Process

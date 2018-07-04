@@ -17,7 +17,7 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "SafeCash"
-            VALUE "FileDescription",    "safecash-tx (CLI Bitcoin transaction editor utility)"
+            VALUE "FileDescription",    "safecash-tx (CLI SafeCash transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "safecash-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR

@@ -56,20 +56,20 @@ QMenu::item:selected {
 }
 
 QToolBar {
-    background-color:#1f1f1f;
-    border-top: 1px solid #16151f;
-	border-bottom: 1px solid #16151f;
+    background-color:#bcbcbc;
+    /*border-top: 1px solid #16151f;*/
+	/*border-bottom: 1px solid #16151f;*/
     padding:0;
     margin:0;
 }
 
 QToolBar > QToolButton {
-    background-color:#1f1f1f;
+    background-color:#bcbcbc;
     border:0px solid #1f1f1f;
     min-height:2.5em;
     padding: 0em 1em;
     font-weight:bold;
-    color:#fff;
+    color:#2c2b3b;
 }
 
 /* menu active */
@@ -1410,7 +1410,7 @@ QStackedWidget#SendCoinsEntry .QFrame#SendCoins > .QLabel { /* Send Coin Entry L
 }
 
 QStackedWidget#SendCoinsEntry .QFrame#SendCoins .QLabel#amountLabel {
-    background-color:#6a6a6a;
+    background-color:#e5e642;
 }
 
 QStackedWidget#SendCoinsEntry .QValidatedLineEdit#payTo { /* Pay To Input Field */
@@ -1595,9 +1595,9 @@ QWidget#ReceiveCoinsDialog .QFrame#frame2 .QLabel#label_2 { /* Label Label */
 }
 
 QWidget#ReceiveCoinsDialog .QFrame#frame2 .QLabel#label { /* Amount Label */
-    background-color:#6a6a6a;
+    background-color:#e5e642;
     min-width:102px;
-    color:#ffffff;
+    color:#2c2b3b;
     font-weight:bold;
     font-size:11px;
     padding-right:5px;
@@ -1613,16 +1613,16 @@ QWidget#ReceiveCoinsDialog .QFrame#frame2 .QLabel#label_3 { /* Message Label */
 }
 
 QWidget#ReceiveCoinsDialog .QFrame#frame2 QPushButton#clearButton { /* Clear Button */
-    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #f6f6f6, stop: .1 rgba(250, 250, 250, 128), stop: .95 rgba(250, 250, 250, 255), stop: 1 #ebebeb);
+    background-color:#23222f;
     border:1px solid #d2d2d2;
-    color:#616161;
+    color:#fff;
     padding-left:10px;
     padding-right:10px;
 }
 
 QWidget#ReceiveCoinsDialog .QFrame#frame2 QPushButton#clearButton:hover {
-    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #f6f6f6, stop: .1 rgba(240, 240, 240, 255), stop: .95 rgba(240, 240, 240, 255), stop: 1 #ebebeb);
-    color:#333;
+    background-color:#d3d3d3;
+    color:#2c2b3b;
 }
 
 QWidget#ReceiveCoinsDialog .QFrame#frame2 QPushButton#clearButton:pressed {
@@ -1630,16 +1630,16 @@ QWidget#ReceiveCoinsDialog .QFrame#frame2 QPushButton#clearButton:pressed {
 }
 
 QWidget#ReceiveCoinsDialog .QFrame#frame QPushButton#showRequestButton { /* Show Button */
-    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #f6f6f6, stop: .1 rgba(250, 250, 250, 128), stop: .95 rgba(250, 250, 250, 255), stop: 1 #ebebeb);
+    background-color:#23222f;
     border:1px solid #d2d2d2;
-    color:#616161;
+    color:#fff;
     padding-left:10px;
     padding-right:10px;
 }
 
 QWidget#ReceiveCoinsDialog .QFrame#frame QPushButton#showRequestButton:hover {
-    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #f6f6f6, stop: .1 rgba(240, 240, 240, 255), stop: .95 rgba(240, 240, 240, 255), stop: 1 #ebebeb);
-    color:#333;
+    background-color:#d3d3d3;
+    color:#2c2b3b;
 }
 
 QWidget#ReceiveCoinsDialog .QFrame#frame QPushButton#showRequestButton:pressed {
@@ -1647,16 +1647,16 @@ QWidget#ReceiveCoinsDialog .QFrame#frame QPushButton#showRequestButton:pressed {
 }
 
 QWidget#ReceiveCoinsDialog .QFrame#frame QPushButton#removeRequestButton { /* Remove Button */
-    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #f6f6f6, stop: .1 rgba(250, 250, 250, 128), stop: .95 rgba(250, 250, 250, 255), stop: 1 #ebebeb);
+    background-color:#23222f;
     border:1px solid #d2d2d2;
-    color:#616161;
+    color:#fff;
     padding-left:10px;
     padding-right:10px;
 }
 
 QWidget#ReceiveCoinsDialog .QFrame#frame QPushButton#removeRequestButton:hover {
-    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #f6f6f6, stop: .1 rgba(240, 240, 240, 255), stop: .95 rgba(240, 240, 240, 255), stop: 1 #ebebeb);
-    color:#333;
+    background-color:#d3d3d3;
+    color:#2c2b3b;
 }
 
 QWidget#ReceiveCoinsDialog .QFrame#frame QPushButton#removeRequestButton:pressed {

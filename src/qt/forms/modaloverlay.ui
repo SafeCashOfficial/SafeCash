@@ -299,7 +299,7 @@ QLabel { color: rgb(40,40,40);  }</string>
            <item row="4" column="1">
             <widget class="QLabel" name="progressIncreasePerH">
              <property name="text">
-              <string>calculating...</string>
+              <string>Calculating...</string>
              </property>
             </widget>
            </item>

@@ -11,7 +11,7 @@
 WalletFrame {
 	background-image: url(':/images/safecash-logo') top left;
 	background-repeat: no-repeat;
-	background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #64ACD2, stop: .1 #1f1f1f, stop: .95 #1f1f1f, stop: 1 #1D80B5);
+	background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #23222f, stop: .25 #2c2b3b, stop: .75 #2c2b3b, stop: 1 #23222f);
 	color: #fff !important;
 	border-top:0px solid #000;
     margin:0;
@@ -841,17 +841,16 @@ QDialog#OptionsDialog QCheckBox#displayAddresses {
 	color: #2c2b3b;
 }
 
-QDialog#OptionsDialog {
-    color:#fff;
-    background-color:#2c2b3b;
-}
-
 /**************************** TOOLS MENU ************************************************/
 
 QDialog#RPCConsole QWidget#tab_info QLabel#label_11, QDialog#RPCConsole QWidget#tab_info QLabel#label_10 { /* Margin between Network and Block Chain headers */
     qproperty-alignment: 'AlignBottom';
     min-height:25px;
     min-width:180px;
+}
+
+QDialog#RPCConsole QTabWidget#tabWidget QVBoxLayout#verticalLayoutDebugButton {
+    background-color:#23222f;
 }
 
 QDialog#RPCConsole QWidget#tab_peers QLabel#peerHeading { /* Peers Info Header */

@@ -7,8 +7,8 @@
 #error This header can only be compiled as C++.
 #endif
 
-#ifndef BITCOIN_PROTOCOL_H
-#define BITCOIN_PROTOCOL_H
+#ifndef SAFECASH_PROTOCOL_H
+#define SAFECASH_PROTOCOL_H
 
 #include <netaddress.h>
 #include <serialize.h>
@@ -247,7 +247,7 @@ enum ServiceFlags : uint64_t {
     // Nothing
     NODE_NONE = 0,
     // NODE_NETWORK means that the node is capable of serving the complete block chain. It is currently
-    // set by all Bitcoin Core non pruned nodes, and is unset by SPV clients or other light clients.
+    // set by all SafeCash Official non pruned nodes, and is unset by SPV clients or other light clients.
     NODE_NETWORK = (1 << 0),
     // NODE_GETUTXO means the node is capable of responding to the getutxo protocol request.
     // Bitcoin Core does not support this but a patch set called Bitcoin XT does.
@@ -406,4 +406,4 @@ public:
     uint256 hash;
 };
 
-#endif // BITCOIN_PROTOCOL_H
+#endif // SAFECASH_PROTOCOL_H

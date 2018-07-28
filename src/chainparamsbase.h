@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_CHAINPARAMSBASE_H
-#define BITCOIN_CHAINPARAMSBASE_H
+#ifndef SAFECASH_CHAINPARAMSBASE_H
+#define SAFECASH_CHAINPARAMSBASE_H
 
 #include <memory>
 #include <string>
@@ -11,7 +11,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between safecash-cli and safecashd)
- * of a given instance of the Bitcoin system.
+ * of a given instance of the SafeCash system.
  */
 class CBaseChainParams
 {
@@ -59,4 +59,4 @@ void SelectBaseParams(const std::string& chain);
  */
 std::string ChainNameFromCommandLine();
 
-#endif // BITCOIN_CHAINPARAMSBASE_H
+#endif // SAFECASH_CHAINPARAMSBASE_H

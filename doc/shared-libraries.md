@@ -36,14 +36,8 @@ The interface is defined in the C header `safecashconsensus.h` located in  `src/
 - `safecashconsensus_SCRIPT_FLAGS_VERIFY_WITNESS` - Enable WITNESS ([BIP141](https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki))
 
 ##### Errors
-- `safecashconsensus_ERR_OK` - No errors with input parameters *(see the return value of `bitcoinconsensus_verify_script` for the verification status)*
+- `safecashconsensus_ERR_OK` - No errors with input parameters *(see the return value of `safecashconsensus_verify_script` for the verification status)*
 - `safecashconsensus_ERR_TX_INDEX` - An invalid index for `txTo`
 - `safecashconsensus_ERR_TX_SIZE_MISMATCH` - `txToLen` did not match with the size of `txTo`
 - `safecashconsensus_ERR_DESERIALIZE` - An error deserializing `txTo`
 - `safecashconsensus_ERR_AMOUNT_REQUIRED` - Input amount is required if WITNESS is used
-
-### Example Implementations
-- [NBitcoin](https://github.com/NicolasDorier/NBitcoin/blob/master/NBitcoin/Script.cs#L814) (.NET Bindings)
-- [node-libbitcoinconsensus](https://github.com/bitpay/node-libbitcoinconsensus) (Node.js Bindings)
-- [java-libbitcoinconsensus](https://github.com/dexX7/java-libbitcoinconsensus) (Java Bindings)
-- [bitcoinconsensus-php](https://github.com/Bit-Wasp/bitcoinconsensus-php) (PHP Bindings)

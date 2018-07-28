@@ -4,7 +4,7 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test block processing.
 
-This reimplements tests from the bitcoinj/FullBlockTestGenerator used
+This reimplements tests from the safecashj/FullBlockTestGenerator used
 by the pull-tester.
 
 We use the testing framework in which we expect a particular answer from

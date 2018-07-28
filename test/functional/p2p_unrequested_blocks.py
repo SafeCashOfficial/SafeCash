@@ -52,15 +52,15 @@ Node1 is unused in tests 3-7:
 """
 
 from test_framework.mininode import *
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import SafeCashTestFramework
 from test_framework.util import *
 import time
 from test_framework.blocktools import create_block, create_coinbase, create_transaction
 
-class AcceptBlockTest(BitcoinTestFramework):
+class AcceptBlockTest(SafeCashTestFramework):
     def add_options(self, parser):
         parser.add_option("--testbinary", dest="testbinary",
-                          default=os.getenv("BITCOIND", "safecashd"),
+                          default=os.getenv("SAFECASHD", "safecashd"),
                           help="safecashd binary to test")
 
     def set_test_params(self):

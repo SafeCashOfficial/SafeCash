@@ -23,7 +23,7 @@ don't have test cases for.
 - Avoid wildcard imports where possible
 - Use a module-level docstring to describe what the test is testing, and how it
   is testing it.
-- When subclassing the BitcoinTestFramwork, place overrides for the
+- When subclassing the SafeCashTestFramwork, place overrides for the
   `set_test_params()`, `add_options()` and `setup_xxxx()` methods at the top of
   the subclass, then locally-defined helper methods, then the `run_test()` method.
 
@@ -94,7 +94,7 @@ Examples tests are `p2p_unrequested_blocks.py`, `p2p_compactblocks.py`.
 - Comptool is a Testing framework for writing tests that compare the block/tx acceptance
 behavior of a safecashd against 1 or more other safecashd instances. It should not be used
 to write static tests with known outcomes, since that type of test is easier to write and
-maintain using the standard BitcoinTestFramework.
+maintain using the standard SafeCashTestFramework.
 
 - Set the `num_nodes` variable (defined in `ComparisonTestFramework`) to start up
 1 or more nodes.  If using 1 node, then `--testbinary` can be used as a command line
@@ -153,13 +153,13 @@ Basic code to support P2P connectivity to a safecashd.
 Framework for comparison-tool style, P2P tests.
 
 #### [test_framework/script.py](test_framework/script.py)
-Utilities for manipulating transaction scripts (originally from python-bitcoinlib)
+Utilities for manipulating transaction scripts (originally from python-safecashlib)
 
 #### [test_framework/blockstore.py](test_framework/blockstore.py)
 Implements disk-backed block and tx storage.
 
 #### [test_framework/key.py](test_framework/key.py)
-Wrapper around OpenSSL EC_Key (originally from python-bitcoinlib)
+Wrapper around OpenSSL EC_Key (originally from python-safecashlib)
 
 #### [test_framework/bignum.py](test_framework/bignum.py)
 Helpers for script.py

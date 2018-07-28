@@ -1,33 +1,33 @@
 # /etc/conf.d/safecashd: config file for /etc/init.d/safecashd
 
 # Config file location
-#BITCOIND_CONFIGFILE="/etc/safecash/safecash.conf"
+#SAFECASHD_CONFIGFILE="/etc/safecash/safecash.conf"
 
-# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
-#BITCOIND_PIDDIR="/var/run/safecashd"
+# What directory to write pidfile to?  (created and owned by $SAFECASHD_USER)
+#SAFECASHD_PIDDIR="/var/run/safecashd"
 
 # What filename to give the pidfile
-#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/safecashd.pid"
+#SAFECASHD_PIDFILE="${SAFECASHD_PIDDIR}/safecashd.pid"
 
 # Where to write safecashd data (be mindful that the blockchain is large)
-#BITCOIND_DATADIR="/var/lib/safecashd"
+#SAFECASHD_DATADIR="/var/lib/safecashd"
 
 # User and group to own safecashd process
-#BITCOIND_USER="safecash"
-#BITCOIND_GROUP="safecash"
+#SAFECASHD_USER="safecash"
+#SAFECASHD_GROUP="safecash"
 
 # Path to safecashd executable
-#BITCOIND_BIN="/usr/bin/safecashd"
+#SAFECASHD_BIN="/usr/bin/safecashd"
 
 # Nice value to run safecashd under
-#BITCOIND_NICE=0
+#SAFECASHD_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
-#BITCOIND_OPTS=""
+#SAFECASHD_OPTS=""
 
 # The timeout in seconds OpenRC will wait for safecashd to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule
 # here. For more information see man 8 start-stop-daemon.
-BITCOIND_SIGTERM_TIMEOUT=60
+SAFECASHD_SIGTERM_TIMEOUT=60

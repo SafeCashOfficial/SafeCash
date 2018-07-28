@@ -23,7 +23,7 @@ Sources 10-99 are for source files that are maintained in the
 the release tarball. Most of these will reside in the `contrib` sub-directory.
 
 Sources 10-19 should be reserved for miscellaneous configuration files.
-Currently only `Source10` is used, for the example `bitcoin.conf` file.
+Currently only `Source10` is used, for the example `safecash.conf` file.
 
 Sources 20-29 should be reserved for man pages. Currently only `Source20`
 through `Source23` are used.
@@ -99,7 +99,7 @@ derived from it.
 ## Systemd
 
 This spec file assumes the target distribution uses systemd. That really only
-matters for the `bitcoin-server` package. At this point, most RPM based
+matters for the `safecash-server` package. At this point, most RPM based
 distributions that still receive vendor updates do in fact use systemd.
 
 The files to control the service are created in the RPM spec file itself using
@@ -112,7 +112,7 @@ command that specifies the timestamp.
 
 ## SELinux
 
-The `bitcoin-server` package should have SELinux support. How to properly do
+The `safecash-server` package should have SELinux support. How to properly do
 that *may* vary by distribution and version of distribution.
 
 The SELinux stuff in this RPM spec file *should* be correct for CentOS, RHEL,

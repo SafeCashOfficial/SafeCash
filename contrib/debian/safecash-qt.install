@@ -1,6 +1,6 @@
 usr/local/bin/safecash-qt usr/bin
-share/pixmaps/bitcoin32.xpm usr/share/pixmaps
-share/pixmaps/bitcoin16.xpm usr/share/pixmaps
-share/pixmaps/bitcoin128.png usr/share/pixmaps
+share/pixmaps/safecash32.xpm usr/share/pixmaps
+share/pixmaps/safecash16.xpm usr/share/pixmaps
+share/pixmaps/safecash128.png usr/share/pixmaps
 debian/safecash-qt.desktop usr/share/applications
 debian/safecash-qt.protocol usr/share/kde4/services/

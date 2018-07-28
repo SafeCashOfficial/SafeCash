@@ -19,14 +19,14 @@ fi
 RETVAL=0
 
 prog=safecashd
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/safecashd
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/safecashd}
+# you can override the lockfile via SAFECASHD_LOCKFILE in /etc/sysconfig/safecashd
+lockfile=${SAFECASHD_LOCKFILE-/var/lock/subsys/safecashd}
 
-# safecashd defaults to /usr/bin/safecashd, override with BITCOIND_BIN
-safecashd=${BITCOIND_BIN-/usr/bin/safecashd}
+# safecashd defaults to /usr/bin/safecashd, override with SAFECASHD_BIN
+safecashd=${SAFECASHD_BIN-/usr/bin/safecashd}
 
-# safecashd opts default to -disablewallet, override with BITCOIND_OPTS
-safecashd_opts=${BITCOIND_OPTS--disablewallet}
+# safecashd opts default to -disablewallet, override with SAFECASHD_OPTS
+safecashd_opts=${SAFECASHD_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "

@@ -10,7 +10,7 @@
 #include <arith_uint256.h>
 #include <crypto/sha256.h>
 #include <crypto/equihash/equihash.h>
-#include <test/test_bitcoin.h>
+#include <test/test_safecash.h>
 #include <uint256.h>
 
 #include <sodium.h>

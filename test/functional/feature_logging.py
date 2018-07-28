@@ -6,9 +6,9 @@
 
 import os
 
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import SafeCashTestFramework
 
-class LoggingTest(BitcoinTestFramework):
+class LoggingTest(SafeCashTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = True

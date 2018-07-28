@@ -28,7 +28,7 @@
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_Main">
        <item>
-        <widget class="QCheckBox" name="bitcoinAtStartup">
+        <widget class="QCheckBox" name="safecashAtStartup">
          <property name="toolTip">
           <string>Automatically start %1 after logging in to the system.</string>
          </property>
@@ -742,7 +742,7 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_Buttons">
        <item>
-        <widget class="QPushButton" name="openBitcoinConfButton">
+        <widget class="QPushButton" name="openSafeCashConfButton">
          <property name="toolTip">
           <string>Open the %1 configuration file from the working directory.</string>
          </property>

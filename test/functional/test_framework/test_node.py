@@ -26,7 +26,7 @@ from .util import (
 # For Python 3.4 compatibility
 JSONDecodeError = getattr(json, "JSONDecodeError", ValueError)
 
-BITCOIND_PROC_WAIT_TIMEOUT = 60
+SAFECASHD_PROC_WAIT_TIMEOUT = 60
 
 class TestNode():
     """A class for representing a safecashd node under test.
@@ -52,7 +52,7 @@ class TestNode():
             # Wait for up to 60 seconds for the RPC server to respond
             self.rpc_timeout = 60
         if binary is None:
-            self.binary = os.getenv("BITCOIND", "safecashd")
+            self.binary = os.getenv("SAFECASHD", "safecashd")
         else:
             self.binary = binary
         self.stderr = stderr
@@ -61,7 +61,7 @@ class TestNode():
         self.extra_args = extra_args
         self.args = [self.binary, "-datadir=" + self.datadir, "-server", "-keypool=1", "-discover=0", "-rest", "-logtimemicros", "-debug", "-debugexclude=libevent", "-debugexclude=leveldb", "-mocktime=" + str(mocktime), "-uacomment=testnode%d" % i]
 
-        self.cli = TestNodeCLI(os.getenv("BITCOINCLI", "safecash-cli"), self.datadir)
+        self.cli = TestNodeCLI(os.getenv("SAFECASHCLI", "safecash-cli"), self.datadir)
         self.use_cli = use_cli
 
         self.running = False
@@ -157,7 +157,7 @@ class TestNode():
         self.log.debug("Node stopped")
         return True
 
-    def wait_until_stopped(self, timeout=BITCOIND_PROC_WAIT_TIMEOUT):
+    def wait_until_stopped(self, timeout=SAFECASHD_PROC_WAIT_TIMEOUT):
         wait_until(self.is_node_stopped, timeout=timeout)
 
     def node_encrypt_wallet(self, passphrase):
@@ -217,7 +217,7 @@ class TestNodeCLI():
         self.binary = binary
         self.datadir = datadir
         self.input = None
-        self.log = logging.getLogger('TestFramework.bitcoincli')
+        self.log = logging.getLogger('TestFramework.safecashcli')
 
     def __call__(self, *options, input=None):
         # TestNodeCLI is callable with safecash-cli command-line options

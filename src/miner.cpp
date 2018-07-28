@@ -43,7 +43,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// BitcoinMiner
+// SafeCashMiner
 //
 
 //
@@ -625,7 +625,7 @@ void IncrementExtraNonce(CBlock* pblock, const CBlockIndex* pindexPrev, unsigned
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void static BitcoinMiner(CWallet *pwallet)
+void static SafeCashMiner(CWallet *pwallet)
 {
     LogPrintf("SafeCash Miner started\n");
     //SetThreadPriority(THREAD_PRIORITY_LOWEST);
@@ -891,7 +891,7 @@ void static BitcoinMiner(CWallet *pwallet)
     //c.disconnect();
 }
 
-void GenerateBitcoins(bool fGenerate, CWallet* pwallet, int nThreads)
+void GenerateSafeCash(bool fGenerate, CWallet* pwallet, int nThreads)
 {
     static boost::thread_group* minerThreads = NULL;
 
@@ -911,6 +911,6 @@ void GenerateBitcoins(bool fGenerate, CWallet* pwallet, int nThreads)
     minerThreads = new boost::thread_group();
     for (int i = 0; i < nThreads; i++)
     {
-        minerThreads->create_thread(boost::bind(&BitcoinMiner, boost::cref(pwallet)));
+        minerThreads->create_thread(boost::bind(&SafeCashMiner, boost::cref(pwallet)));
     }
 }

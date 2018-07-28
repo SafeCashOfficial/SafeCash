@@ -7,7 +7,7 @@ import configparser
 import os
 import struct
 
-from test_framework.test_framework import BitcoinTestFramework, SkipTest
+from test_framework.test_framework import SafeCashTestFramework, SkipTest
 from test_framework.mininode import CTransaction
 from test_framework.util import (assert_equal,
                                  bytes_to_hex_str,
@@ -34,7 +34,7 @@ class ZMQSubscriber:
         return body
 
 
-class ZMQTest (BitcoinTestFramework):
+class ZMQTest (SafeCashTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
 
@@ -45,7 +45,7 @@ class ZMQTest (BitcoinTestFramework):
         except ImportError:
             raise SkipTest("python3-zmq module not available.")
 
-        # Check that bitcoin has been built with ZMQ enabled.
+        # Check that safecash has been built with ZMQ enabled.
         config = configparser.ConfigParser()
         if not self.options.configfile:
             self.options.configfile = os.path.abspath(os.path.join(os.path.dirname(__file__), "../config.ini"))

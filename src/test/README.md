@@ -5,7 +5,7 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with `make check`.
 
-To run the safecashd tests manually, launch `src/test/test_bitcoin`. To recompile
+To run the safecashd tests manually, launch `src/test/test_safecash`. To recompile
 after a test file was modified, run `make` and then run the test again. If you
 modify a non-test file, use `make -C src/test` to recompile only what's needed
 to run the safecashd tests.
@@ -21,28 +21,28 @@ the `src/qt/test/test_main.cpp` file.
 
 ### Running individual tests
 
-test_bitcoin has some built-in command-line arguments; for
+test_safecash has some built-in command-line arguments; for
 example, to run just the getarg_tests verbosely:
 
-    test_bitcoin --log_level=all --run_test=getarg_tests
+    test_safecash --log_level=all --run_test=getarg_tests
 
 ... or to run just the doubledash test:
 
-    test_bitcoin --run_test=getarg_tests/doubledash
+    test_safecash --run_test=getarg_tests/doubledash
 
-Run `test_bitcoin --help` for the full list.
+Run `test_safecash --help` for the full list.
 
 ### Note on adding test cases
 
 The sources in this directory are unit test cases.  Boost includes a
-unit testing framework, and since bitcoin already uses boost, it makes
+unit testing framework, and since SafeCash already uses boost, it makes
 sense to simply use this framework rather than require developers to
 configure some other framework (we want as few impediments to creating
 unit tests as possible).
 
-The build system is setup to compile an executable called `test_bitcoin`
+The build system is setup to compile an executable called `test_safecash`
 that runs all of the unit tests.  The main source file is called
-test_bitcoin.cpp. To add a new unit test file to our test suite you need 
+test_safecash.cpp. To add a new unit test file to our test suite you need 
 to add the file to `src/Makefile.test.include`. The pattern is to create 
 one test file for each class or source file for which you want to create 
 unit tests.  The file naming convention is `<source_filename>_tests.cpp` 

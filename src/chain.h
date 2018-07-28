@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_CHAIN_H
-#define BITCOIN_CHAIN_H
+#ifndef SAFECASH_CHAIN_H
+#define SAFECASH_CHAIN_H
 
 #include <arith_uint256.h>
 #include <primitives/block.h>
@@ -506,4 +506,4 @@ public:
     CBlockIndex* FindEarliestAtLeast(int64_t nTime) const;
 };
 
-#endif // BITCOIN_CHAIN_H
+#endif // SAFECASH_CHAIN_H

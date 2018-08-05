@@ -40,17 +40,17 @@ from the root of the repository.
 
 **Note**: You only need Berkeley DB if the wallet is enabled (see the section *Disable-Wallet mode* below).
 
-Build SafeCash
+Build SafeCash Official
 ------------------------
 
-1. Clone the safecash source code and cd into `safecash`
+1. Clone the SafeCash Official source code and cd into `safecash`
 
         git clone https://github.com/safecashofficial/safecash
         cd safecash
 
-2.  Build safecash:
+2.  Build SafeCash Official:
 
-    Configure and build the headless safecash binaries as well as the GUI (if Qt is found).
+    Configure and build the headless SafeCash Official binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
@@ -71,7 +71,7 @@ Running
 
 SafeCash is now available at `./src/safecashd`
 
-Before running, it's recommended you create an RPC configuration file.
+Before running, it's recommended that you create an RPC configuration file.
 
     echo -e "rpcuser=safecashrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/SafeCash/safecash.conf"
 

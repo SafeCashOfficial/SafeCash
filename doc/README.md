@@ -9,7 +9,7 @@ To download the SafeCash QT Wallet, visit [safecash.io](https://safecash.io/#dow
 
 Running
 ---------------------
-The following are some helpful notes on how to run SafeCash on your native platform.
+The following are some helpful notes on how to run SafeCash Official on your native platform.
 
 ### Unix
 
@@ -24,7 +24,7 @@ Unpack the files into a directory, and then run safecash-qt.exe.
 
 ### OS X
 
-Drag SafeCash to your applications folder, and then run safecash-qt.
+Drag SafeCash Official to your applications folder, and then run SafeCash Official.
 
 ### Need Help?
 
@@ -32,7 +32,7 @@ Drag SafeCash to your applications folder, and then run safecash-qt.
 
 Building
 ---------------------
-The following are developer notes on how to build SafeCash on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build SafeCash Official on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [OS X Build Notes](build-osx.md)

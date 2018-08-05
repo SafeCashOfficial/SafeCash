@@ -6,7 +6,7 @@ Some notes on how to build SafeCash in Unix.
 
 Note
 ---------------------
-Always use absolute paths to configure and compile safecash and the dependencies,
+Always use absolute paths to configure and compile SafeCash Official and the dependencies,
 for example, when specifying the path of the dependency:
 
 	../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
@@ -124,7 +124,7 @@ The command `make install` installs the executables in the `./depends/x86_64-pc-
 Dependencies for the GUI: Ubuntu & Debian
 -----------------------------------------
 
-If you want to build SafeCash-Qt, make sure that the required packages for Qt development
+If you want to build safecash-qt, make sure that the required packages for Qt development
 are installed. Either Qt 5 or Qt 4 are necessary to build the GUI.
 If both Qt 4 and Qt 5 are installed, Qt 5 will be used. Pass `--with-gui=qt4` to configure to choose Qt4.
 To build without GUI pass `--without-gui`.
@@ -205,7 +205,7 @@ If you need to build Boost yourself:
 
 Security
 --------
-To help make your safecash installation more secure by making certain attacks impossible to
+To help make your SafeCash Official installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, binaries are hardened by default.
 This can be disabled with:
 
@@ -237,8 +237,8 @@ Hardening enables the following features:
     ET_DYN
 
 * Non-executable Stack
-    If the stack is executable then trivial stack based buffer overflow exploits are possible if
-    vulnerable buffers are found. By default, safecash should be built with a non-executable stack
+    If the stack is executable then trivial stack-based buffer overflow exploits are possible if
+    vulnerable buffers are found. By default, SafeCash Official should be built with a non-executable stack
     but if one of the libraries it uses asks for an executable stack or someone makes a mistake
     and uses a compiler extension which requires an executable stack, it will silently build an
     executable without the non-executable stack protection.
@@ -246,7 +246,7 @@ Hardening enables the following features:
     To verify that the stack is non-executable after compiling use:
     `scanelf -e ./safecash`
 
-    the output should contain:
+    The output should contain:
 	STK/REL/PTL
 	RW- R-- RW-
 
@@ -254,7 +254,7 @@ Hardening enables the following features:
 
 Disable-wallet mode
 --------------------
-When the intention is to run only a P2P node without a wallet, safecash may be compiled in
+When the intention is to run only a P2P node without a wallet, SafeCash Official may be compiled in
 disable-wallet mode with:
 
     ./configure --disable-wallet
